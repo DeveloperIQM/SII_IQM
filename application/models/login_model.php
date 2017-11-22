@@ -1,33 +1,19 @@
 <?php
 
 Class Login_model extends CI_Model{
+  public function __construct() {
+    parent::__construct();
+  }
   //Función para obtener el usuario
   public function obtenerUsuario($usuario, $contrasena){
-    $this->db->select('id_usuario, usuario, contrasena');
-    $this->db->from('usuario');
-    $this->db->where('usuario', $usuario);
-    $this->db->where('contrasena', MD5($contrasena));
-    $this->db->limit(1);
-
-    $query = $this -> db -> get();
-    if($query -> num_rows() == 1){
-      return $query->result();
-    }else{
-      return false;
-    }
-  }
-  //Lee datos para devolver variable de la sesion
-  public function obtenerInfoUsuario($usuario) {
-    $this->db->select('*');
-    $this->db->from('usuario');
-    $this->db->where('usuario', $usuario);
-    $this->db->limit(1);
-
-    $query = $this->db->get();
+    $this->db->where('usuario',$usuario);
+    $this->db->where('contrasena',$contrasena);
+    $query = $this->db->get('usuario');
     if($query->num_rows() == 1){
-      return $query->result();
-      }else{
-        return false;
-      }
+      return $query->row();
+    }else{
+    $this->session->set_flashdata('usuario_incorrecto','Los datos introducidos son incorrectos');
+    redirect(base_url().'login_controller','refresh');
+   }
   }
 }

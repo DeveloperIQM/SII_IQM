@@ -6,10 +6,10 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span></button>
-				<a class="navbar-brand" href="#"><img src="img/logo-iqm.png" style="width: 30%;"></a>
+				<a class="navbar-brand" href="#"><img src="<?= base_url()?>recursos/img/logo-iqm.png" style="width: 28%;"></a>
 				<ul class="nav navbar-top-links navbar-right">
 					<li class="dropdown"><a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
-						<em class="fa fa-bell"></em><span class="label label-info">5</span>
+						<em class="fa fa-bell"></em><span class="label label-danger">5</span>
 					</a>
 						<ul class="dropdown-menu dropdown-alerts">
 							<li><a href="#">
@@ -34,36 +34,27 @@
 	</nav>
 	<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
 		<div class="profile-sidebar">
-			<div class="profile-userpic">
-				<img src="http://placehold.it/50/30a5ff/fff" class="img-responsive" alt="">
-			</div>
 			<div class="profile-usertitle">
-				<div class="profile-usertitle-name">Username</div>
-				<div class="profile-usertitle-status"><span class="indicator label-success"></span>Online</div>
+				<div class="profile-usertitle-name"><b>Angie Godínez</b></div>
+				<div class="profile-usertitle-status"><span class="indicator label-success"></span>En línea</div>
 			</div>
 			<div class="clear"></div>
 		</div>
 		<div class="divider"></div>
-		<form role="search">
-			<div class="form-group">
-				<input type="text" class="form-control" placeholder="Search">
-			</div>
-		</form>
 		<ul class="nav menu">
-			<li class="active"><a href="index.html"><em class="fa fa-dashboard">&nbsp;</em> Inicio</a></li>
-			<li><a href="widgets.html"><em class="fa fa-calendar">&nbsp;</em>Administrador</a></li>
-			<li><a href="charts.html"><em class="fa fa-bar-chart">&nbsp;</em> Usuarias IQM</a></li>
-			<li class="parent ">
-			  <a data-toggle="collapse" href="#sub-item-1"><em class="fa fa-navicon">&nbsp;</em> Atención por Área <span data-toggle="collapse" href="#sub-item-1" class="icon pull-right"><em class="fa fa-plus"></em></span></a>
+			<li class="active"><a href="<?=base_url('inicio_controller')?>"><em class="fa fa-home">&nbsp;</em> Inicio</a></li>
+			<li><a href="<?=base_url('usuarios_controller')?>"><em class="fa fa-users">&nbsp;</em> Administrador</a></li>
+			<li><a href="<?=base_url('usuarias_controller')?>"><em class="fa fa fa-female">&nbsp;</em> Usuarias IQM</a></li>
+			<li class="parent "><a data-toggle="collapse" href="#sub-item-1"><em class="fa fa-clipboard">&nbsp;</em> Atención por Área <span data-toggle="collapse" href="#sub-item-1" class="icon pull-right"><em class="fa fa-plus"></em></span></a>
 			  <ul class="children collapse" id="sub-item-1">
-			   <li><a class="" href="#"><span class="fa fa-arrow-right">&nbsp;</span> Legal</a></li>
-			   <li><a class="" href="#"><span class="fa fa-arrow-right">&nbsp;</span> Psicología</a></li>
-			   <li><a class="" href="#"><span class="fa fa-arrow-right">&nbsp;</span> Psicología Infantil</a></li>
-			   <li><a class="" href="#"><span class="fa fa-arrow-right">&nbsp;</span> Terapía Grupal</a></li>
+			   <li><a class="" href="#"><span class="fa fa-balance-scale">&nbsp;</span> Legal</a></li>
+			   <li><a class="" href="#"><span class="fa fa-gg">&nbsp;</span> Psicología</a></li>
+			   <li><a class="" href="#"><span class="fa fa-child">&nbsp;</span> Psicología Infantil</a></li>
+			   <li><a class="" href="#"><span class="fa fa-object-group">&nbsp;</span> Terapía Grupal</a></li>
 			  </ul>
 			</li>
-			<li><a href="panels.html"><em class="fa fa-clone">&nbsp;</em> Derivaciones</a></li>
-			<li><a href="panels.html"><em class="fa fa-clone">&nbsp;</em> Base de Datos</a></li>
+			<li><a href="panels.html"><em class="fa fa-sort-amount-asc">&nbsp;</em> Derivaciones</a></li>
+			<li><a href="panels.html"><em class="fa fa-file-excel-o">&nbsp;</em> Base de Datos</a></li>
 			<li><a href="login.html"><em class="fa fa-power-off">&nbsp;</em> Logout</a></li>
 		</ul>
 	</div><!--/.sidebar-->

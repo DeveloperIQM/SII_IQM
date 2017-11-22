@@ -1,3 +1,11 @@
+		<footer class=" ">
+			<div class="row">
+				<div class="col-lg-12col-md-12 col-sm-12 ">
+					<em class="fa fa-copyright" aria-hidden="true"></em> 2017 Sistema de Información Interna | Instituto Queretano de las Mujeres
+				</div>
+			</div>
+		</footer>
+	</div>	<!--/.main-->
 	<script src="<?= base_url()?>recursos/js/jquery-1.11.1.min.js"></script>
 	<script src="<?= base_url()?>recursos/js/bootstrap.min.js"></script>
 	<script src="<?= base_url()?>recursos/js/chart.min.js"></script>

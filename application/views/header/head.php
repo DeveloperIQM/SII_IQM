@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta descripcion="Head del Sistema de Información Interna IQM">
-	<title>Sistema de Informacion Interna IQM</title>
+	<title><?= $titulo ?></title>
 	<link href="<?= base_url()?>recursos/css/bootstrap.min.css" rel="stylesheet">
 	<link href="<?= base_url()?>recursos/css/font-awesome.min.css" rel="stylesheet">
 	<link href="<?= base_url()?>recursos/css/datepicker3.css" rel="stylesheet">
